@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioHome</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <header>
+        <nav class="Navbar">
+            <!-- this navbar works as a flexbox with two divs, one for the logo and name and the other for the links-->
+            <div class="navShawn"> <!-- this uses a flexbox to display the image right next to the name-->
+                <img src="assets/logo.png" alt="logo" height="20" width="20">
+                <!--calling the images stored in the assets-->
+                <h3>Shawn</h3>
+            </div>
+            <div class="ulSmall">
+                <!-- This div is used set the size of this half of the navbar when the screen is small -->
+                <ul> <!--unordered list used to hold all the links to the other pages-->
+                    <li><a href="home.html" class="CurrentPage">home</a></li>
+                    <!-- the link with the CurrentPage class is white -->
+                    <li><a href="projects.html">works</a></li>
+                    <li><a href="aboutme.html">about-me</a></li>
+                    <li><a href="contacts.html">contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="ShawnIntro"> <!--flexbox to display the text and image similar to the navbar-->
+            <div>
+                <!-- Made some words into different colors using the span element as to not effect the flow of the text -->
+                <h1>Shawn is a <span class="inlinePurple">computer science</span>
+                    student and looking for <span class="inlinePurple">internships</span></h1>
+                <p>He struggles to put together simple websites and coding projects with a smile on his face!</p>
+                <a href="contacts.html" class="PurpleBorder">Contact me!!</a>
+                <!--the purple border class adds a purple border around whater has the class-->
+            </div>
+            <div id="shawnImage"> <!--adjusts image size, margin, and the text underneath-->
+                <img src="assets/rainraingoaway.JPG" alt="Picture of Shawn frolicking in the rain">
+                <div>
+                    <span class="GreyBorder">Currently listening to <span class="inlinePurple">sad music!</span></span>
+                </div> <!-- the purple border class adds a grey border around whater has the class -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="quoteBlock"> <!--Center this div using box model-->
+            <div>
+                <h3><span id="quote">"I may be dumb, but I'm not stupid"</span></h3>
+            </div> <!--the quote uses two divs with different paddings and margins to display how it should-->
+            <div id="last">
+                <h3><span id="author">- Shawn Carlile</span></h3>
+            </div>
+        </div>
+        <div class="preview"> <!--the preview class is a flexbox to display the line next to the text-->
+            <h2 class="hashtag">projects</h2>
+            <!--hashtag class adds a # infront of the text using the ::before pseudo-element -->
+            <div class="purpline"></div> <!-- 0px height and percentage width empty div with purple border for line -->
+            <span><a href="projects.html">View all ----></a></span>
+        </div>
+        <div class="cardContainer"> <!--grid container that holds the grid cards -->
+            <div class="gridCard">
+                <!-- each card works the same way, 1 column and 3 rows, each row height is different for the type of content it will contain -->
+                <img src="assets/LivveyTree.jpeg" alt="My dog sniffing a tree"> <!-- first row -->
+                <p class="imgCaption">HTML, CSS, Java</p> <!-- second row -->
+                <div class="cardBody"> <!-- contains all the thrid row content-->
+                    <h3>Livvey Tree</h3>
+                    <p>My dog sniffing a tree</p>
+                    <span class="PurpleBorder">Awake</span>
+                    <span class="GreyBorder">Sleep</span>
+                </div>
+            </div>
+            <div class="gridCard">
+                <img src="assets/LivveyChill.jpeg" alt="My dog chilling on couch">
+                <p class="imgCaption">HTML, CSS, Javascript</p>
+                <div class="cardBody">
+                    <h3>Livvey Chill</h3>
+                    <p>My dog chilling on the couch</p>
+                    <span class="PurpleBorder">Awake</span>
+                </div>
+            </div>
+            <div class="gridCard">
+                <img src="assets/oldmanmash.JPG" alt="Me wearing an old man holloween mask">
+                <p class="imgCaption">Java</p>
+                <div class="cardBody">
+                    <h3>Me</h3>
+                    <p>Me wearing a holloween mask</p>
+                    <span class="PurpleBorder">Hungry</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2 class="hashtag">skills</h2>
+            <div class="purpline"></div>
+        </div>
+
+        <div class="skillsGrid">
+            <!-- the skillsGrid class works similar to the cardContainer class just smaller and with only two rows -->
+            <div class="skillsCard"> <!-- each card is made up of two rows and one column-->
+                <h3>Languages</h3>
+                <h3>Java, Javascript, English</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Databases</h3>
+                <h3>I have never touched databases before</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Tools</h3>
+                <h3>VSCode, Eclipse, Hammer, Wrench, Pliers, Drill, Screwdriver</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Other</h3>
+                <h3>HTML, CSS, Tacos, Pizza, Panda Express, Arctic Monkeys</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Frameworks</h3>
+                <h3>Picture frame, glasses frames, 60FPS, House Frames</h3>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2 class="hashtag">about me</h2>
+            <div class="purpline"></div>
+        </div>
+        <div class="aboutme">
+            <!-- the aboutme class just sets a width of 50% so the text looks similar to the example -->
+            <p>Hello, I'm Shawn!</p>
+            <p>Experience the power of compressed air in a can, your ultimate cleaning companion!
+                Perfect for removing dust and debris from delicate electronics, keyboards, and camera lenses, this
+                versatile tool ensures your devices stay pristine.
+            </p>
+
+            <p>Ideal for workshops and home use, it effortlessly blasts away particles from hard-to-reach areas.
+                Lightweight and portable,
+                it’s perfect for on-the-go maintenance, making it a must-have for tech enthusiasts and DIYers alike.
+                Keep your workspace tidy and your gadgets in top shape with this essential air can!
+            </p>
+            <a href="aboutme.html" class="PurpleBorder">Read More --></a>
+        </div>
+
+        <div class="preview">
+            <h2 class="hashtag">contacts</h2>
+            <div class="purpline"></div>
+        </div>
+        <div id="contactme"> <!--the contactme id just sets a bottom margin for spacing-->
+            <p>I'm interested in freelance activities. However, if you have other requests or questions,
+                don't hesitate to contact me.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <div class="greyLine"></div>
+        <div class="footerFlex"> <!--footerFlex provides formatting for the footer's email address and media sections-->
+            <div>
+                <div class="navShawn">
+                    <img src="assets/logo.png" alt="logo" height="20" width="20">
+                    <h3>Shawn</h3>
+                    <p>srcarlil@svsu.edu</p>
+                </div>
+                <p>Web designer and front-end developer</p>
+            </div>
+            <div>
+                <h2>Media</h2>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/linkedinLogo.png"
+                        alt="Shawn's linkedin link" width="25" height="25"></a>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/GitHubLogo.png"
+                        alt="Shawn's github link" width="25" height="25"></a>
+            </div>
+        </div>
+        <div class="copyright"> <!-- this class centers the div using a flexbox -->
+            <p>Copyright 2024. Made by Shawn (this copyright will not be enforced)</p>
+        </div>
+    </footer>
+</body>
+
+</html>

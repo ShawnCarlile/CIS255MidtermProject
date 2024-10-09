@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioAboutMe</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <header>
+        <nav class="Navbar"> <!--copied from home.html-->
+            <div class="navShawn">
+                <img src="assets/logo.png" alt="logo" height="20" width="20">
+                <h3>Shawn</h3>
+            </div>
+            <div class="ulSmall">
+                <ul>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="projects.html">works</a></li>
+                    <li><a href="aboutme.html" class="CurrentPage">about-me</a></li>
+                    <li><a href="contacts.html">contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="preview">
+            <h2 class="forwardSlash">about-me</h2> <!-- the forwardSlash class functions the same as the hashtag class but uses / instead -->
+        </div>
+        <p class="white">Who am I?</p>
+        <br>
+        <br>
+        <br>
+        <div id="aboutmeFlex"> <!--formats the text and the image similar to the ShawnIntro id in home.html using the same methods-->
+            <div class="aboutme"> <!--copied from home.html-->
+                <p>Hello, I'm Shawn!</p>
+                <p>Experience the power of compressed air in a can, your ultimate cleaning companion!
+                    Perfect for removing dust and debris from delicate electronics, keyboards, and camera lenses, this
+                    versatile tool ensures your devices stay pristine.
+                </p>
+    
+                <p>Ideal for workshops and home use, it effortlessly blasts away particles from hard-to-reach areas.
+                    Lightweight and portable,
+                    it’s perfect for on-the-go maintenance, making it a must-have for tech enthusiasts and DIYers alike.
+                    Keep your workspace tidy and your gadgets in top shape with this essential air can!
+                </p>
+            </div>
+            <div>
+                <img src="assets/ThatOneFaceIMake.jpg" width="auto" height="300px">
+            </div>
+        </div>
+        
+        <div class="preview">
+        <h2 class="hashtag">skills</h2>
+        </div>
+
+        <div class="skillsGrid"> <!--copied from home.html-->
+            <div class="skillsCard">
+                <h3>Languages</h3>
+                <h3>Java, Javascript, English</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Databases</h3>
+                <h3>I have never touched databases before</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Tools</h3>
+                <h3>VSCode, Eclipse, Hammer, Wrench, Pliers, Drill, Screwdriver</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Other</h3>
+                <h3>HTML, CSS, Tacos, Pizza, Panda Express, Arctic Monkeys</h3>
+            </div>
+            <div class="skillsCard">
+                <h3>Frameworks</h3>
+                <h3>Picture frame, glasses frames, 60FPS, House Frames</h3>
+            </div>
+        </div>
+
+        <div class="preview">
+        <h2 class="hashtag">my-fun-facts</h2>
+        </div>
+        <div id="funfacts"> <!-- the funfacts id is a flexbox used to make the funfacts responsive and formatted correctly -->
+            <div class="funItem">I like winter more than summer</div> <!-- the funItem class gives each item spacing, borders, height, and width-->
+            <div class="funItem">I often bike with my friends</div>
+            <div class="funItem">I like <span>pizza</span> and <span>pasta</span> </div> <!--when unspecified, span changes text to white-->
+            <div class="funItem">I was in <span>Egypt</span>, <span>Poland</span>, and <span>Turkey</span></div>
+            <div class="funItem">My favorite move is <span>The Green Mile</span></div>
+            <div class="funItem">I am still in school</div>
+            <div class="funItem">I don't have any siblings</div>
+        </div>
+    </main>
+    <footer>
+        <div class="greyLine"></div>
+        <div class="footerFlex"> <!--copied from home.html-->
+            <div>
+                <div class="navShawn">
+                    <img src="assets/logo.png" alt="logo" height="20" width="20">
+                    <h3>Shawn</h3>
+                    <p>srcarlil@svsu.edu</p>
+                </div>
+                <p>Web designer and front-end developer</p>
+            </div>
+            <div>
+                <h2>Media</h2>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/linkedinLogo.png"
+                        alt="Shawn's linkedin link" width="25" height="25"></a>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/GitHubLogo.png"
+                        alt="Shawn's github link" width="25" height="25"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2024. Made by Shawn (this copyright will not be enforced)</p>
+        </div>
+    </footer>
+</body>
+
+</html>

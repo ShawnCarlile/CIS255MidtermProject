@@ -1,0 +1,285 @@
+/* page must inclue media queries */
+
+:root { /* learned how to use variables from w3Schools */
+    --BackgroundGrey: rgb(40 44 51);
+    --PGrey: rgb(171 178 191);
+    --purple: rgb(199 120 222);
+}
+
+body { /* defines background color and margins */
+    background-color: var(--BackgroundGrey);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1, h2, h3, span{ /* changes color of all elements listed */
+    color:white;
+
+}
+
+p, li { /* changes color of all elements listed */
+    color: var(--PGrey);
+
+}
+
+.Navbar { /* the space-between seperates the elements inside the flexbox away from each other */
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.navShawn{ /* seperate flexbox that centers the items so that they line up with each other */
+    display:flex;
+    align-items:center
+}
+
+.Navbar ul {
+    display:flex;
+    text-decoration: none;
+    list-style-type: none; /* copy and pasted this from w3 schools, it removes the bullet points from the li elements in the ul */
+    
+}
+
+.Navbar li, a { /* removes underline, add spacing, and changes color of links */
+    margin-right:30px;
+    color: var(--PGrey);
+    text-decoration: none;
+}
+
+/* .Navbar ul li::first-letter { tried using this method to change the # to purple, 
+                                but it would change the # and the first letter
+    color: var(--purple);
+} */
+
+/* chatGPT method uses the ::before pseudo-element to add a purple # in front of the first letter 
+/* Use ::before to style the # symbol */
+.Navbar li a::before { /* selects the link within the list within the Navbar class */
+    content: "#";      /* specifies what to put in front of the chosen element */
+    color: var(--purple); /* Applies color to the # */
+}
+
+#ShawnIntro { /* adds top spacing for formatting, and displays the text and image away from eachother */
+    margin-top:50px;
+    display:flex;
+    justify-content: space-between;
+}
+
+#shawnImage{ /* adds extra margin so image and text don't collide when screen is shrunk */
+    margin-left: 50px;
+
+}
+
+#shawnImage img{ /* adds fixed width and height to image */
+    width:500px;
+    height: auto;
+}
+
+@media screen and (max-width: 800px) { /* media query that activates when screen is shrunk to 800px or less */
+
+    .ulSmall{ /* this class shrinks the size of the right half of the navbar to 500px wide so that it doesn't extend past screen */
+        width:500px;
+    }
+
+    #ShawnIntro{ /* changes #ShawnIntro flexbox into a column so that items stack on top of each other when screen is shrunk */
+        flex-direction: column;
+    }
+
+    #shawnImage { /* adds top margin to image so that it is seperated from text above it */
+        margin-top: 30px;
+    }
+
+    #shawnImage img{ /* new fixed size of image to adjust to screen size */
+        width: 400px;
+        height: auto;
+    }
+}
+
+.hashtag::before { /* my favorite class, it uses the ::before psuedo-element in order to add the given text infront of wherever it is specified */
+    content: "#"; /* specifies what text to add in front */
+    color: var(--purple)
+}
+
+.forwardSlash::before { /* same as above but with a / */
+    content: "/";
+    color: var(--purple);
+}
+
+.cardContainer { 
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    /* responsive grid layout taken from chatGPT */
+    /* it uses auto-fit to move cards when there is available space or */
+    /* unavailable space with a minimum card width of 250px */
+    height:auto;
+}                                                                
+
+.gridCard {  /* fixes row height to fit image, caption, and body text. Also specifies spacing and border */
+    display:grid; 
+    grid-template-rows: 200px 50px 130px; /* first row = 200px, second row = 50px, and third row = 130px */
+    margin: 10px;
+    border: 1px solid var(--PGrey);
+}
+.gridCard img{ /* fixes image height to fit into the card, whatever isn't able to fit in card gets cut off */
+    width:100%;
+    height:200px;
+    object-fit: cover; 
+    /* chatgpt solution to the images being warped, it allows the images to be cut off to fit in the card */
+    /* the images that are using this still look great */
+}
+
+.imgCaption{ /* adds spacing to the text in the second row of the gridCards */
+    padding-left:5px;
+}
+
+.cardBody{ /* adds spacing to the cardBody which lies in the third row of the card grid */
+    border-top: 1px solid var(--PGrey);
+    padding: 5px;
+    padding-bottom: 20px;
+}
+.CurrentPage { /* changes navbar text color according to which page you are on */
+    color: white;
+}
+
+.inlinePurple { /* used to change the color of specific words using span */
+    color: var(--purple);
+}
+
+.PurpleBorder { /* adds border and spacing to wherever it is used */
+    padding: 7px;
+    border: 1px solid var(--purple);
+    color: white;
+}
+
+.GreyBorder { /* adds border and spacing to wherever it is used */
+    padding: 7px;
+    border: 1px solid var(--PGrey);
+}
+
+#quoteBlock { /* centers the quote and author, also adds top spacing */
+    margin-top: 70px;
+    text-align: center;
+}
+
+#quote { /* adds a border and padding around the quote */
+    padding: 15px;
+    border: 1px solid var(--purple);
+    color: white;
+}
+
+#author { /* adds a border and padding around the author */
+    padding: 10px;
+    border: 1px solid var(--purple);
+    color: white;
+}
+
+#last { /* aligns the author with the bottom of the quote */
+    margin-top: 26px;
+}
+
+.purpline { /* my second favorite class, adds a 1px height solid line across half of its container */
+    border: 1px solid var(--purple);
+    height: 0px;
+    width: 50%;
+}
+
+.preview { /* gives its content spacing away from what's above it and aligns it with each other */
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+
+.preview h2{ /* adds spacing inbetween the text and the purpline */
+    margin-right:15px;
+}
+
+.preview span a { /* changes color of a from PGrey to white */
+    color: white;
+}
+
+.preview span { /* spaces the arrow away from the purpline and text */
+    margin-left: 20%;
+}
+
+.white{ /* changes color to white */
+    color:white;
+}
+
+.skillsGrid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    /* responsive grid layout taken from chatGPT */
+    /* it uses auto-fit to move cards when there is available space or */
+    /* unavailable space with a minimum card width of 200px */
+    height:auto;
+}   
+
+.skillsCard { /* allows the two rows' height to adjust according to its surroundings and content, also adds spacing and border */
+    display:grid;
+    grid-template-rows: auto auto;
+    border: 1px solid var(--PGrey);
+    padding:5px;
+    margin:10px;
+}
+
+.aboutme { /* sets the width of aboutme class to 50% of its container */
+    width:50%;
+}
+
+#contactme { /* adds spacing at the bottom to make way for the footer */
+    margin-bottom: 70px;
+}
+
+.greyLine { /* like the purpline class but grey */
+    border: 1px solid var(--PGrey);
+    height: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer p{ /* sets the color of p in the footer semantic */
+    color: white;
+}
+
+.navShawn p{ /* navShawn class is reused in the footer, this adds spacing and color to the p inside that div  */
+    margin-left: 30px;
+    color: var(--PGrey);
+}
+
+.footerFlex{ /* flexbox used in the footer, spaces contents away from eachother and centers them height-wise */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{ /* defines spacing above it and uses flexbox to center copyright div */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p{ /* changes color of p inside copyright to grey instead of white */
+    color: var(--PGrey);
+}
+
+#aboutmeFlex{ /* flexbox used to space about me text and image away from each other */
+    display:flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+#funfacts { /* wraps the funItem divs and uses space-between so that they are responsive. It looks funky, but i think it is cool */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.funItem { /* uses fit-content and auto height and width to make the border only fit around the content and not across whole container */
+    border: 1px solid var(--PGrey); /* can use something like this class as an alternative to using span to fit border only around content */
+    color: var(--PGrey);
+    padding:5px;
+    height: fit-content;
+    width: auto;
+    margin: 5px;
+}
